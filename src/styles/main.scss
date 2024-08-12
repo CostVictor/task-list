@@ -1,4 +1,101 @@
 @import "./reset";
 @import "./variables";
 
+body {
+  background-color: $bg-principal;
+  color: $color-default;
+}
 
+header {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    margin: 4rem;
+    padding: 5px 5rem;
+    font-size: 2.5rem;
+  }
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  width: 20rem;
+  margin: auto;
+
+  input {
+    border: none;
+    border-bottom: 1px solid $color-default;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    color: $text-default;
+    padding: 3px;
+    font-size: 1rem;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: $color-default;
+
+    padding: 5px;
+    border: 1px solid $color-default;
+    border-radius: 6px;
+  }
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  margin: 3rem 0px;
+
+  @media (max-width: 850px) {
+    display: block;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: fit-content;
+
+  padding: 2rem;
+  margin: 0px auto;
+  border: 1px solid $color-default;
+  border-radius: 30px;
+
+  h2 {
+    text-align: center;
+    user-select: none;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $color-default;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    width: 100%;
+
+    li {
+      display: flex;
+      gap: 20px;
+      color: $text-default;
+      font-size: 1.2rem;
+      margin: 10px;
+
+      &.finished {
+        color: $text-finished;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    width: 70%;
+    margin: 2rem auto;
+  }
+}
