@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <header>
@@ -12,30 +16,24 @@
 
     <main>
       <form>
-        <input id="input" type="text" placeholder="Adicionar nova tarefa..." required>
+        <input
+          id="input"
+          type="text"
+          placeholder="Adicionar nova tarefa..."
+          required
+        />
         <button>Adicionar</button>
       </form>
 
       <div class="content">
         <div class="container">
           <h2>Pendentes</h2>
-          <ul id="list_pending">
-            <li>Tarefa 1</li>
-            <li>Tarefa 1</li>
-            <li>Tarefa 1</li>
-            <li>Tarefa 1</li>
-            <li>Tarefa 1</li>
-            <li>Tarefa 1</li>
-            <li>Tarefa 1</li>
-            <li>Tarefa 1</li>
-          </ul>
+          <ul id="list_pending"></ul>
         </div>
-        
+
         <div class="container">
           <h2>Concluídas</h2>
-          <ul id="list_finished">
-            <li class="finished">Tarefa 2</li>
-          </ul>
+          <ul id="list_finished"></ul>
         </div>
       </div>
     </main>

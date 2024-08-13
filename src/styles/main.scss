@@ -33,17 +33,17 @@ form {
     padding: 3px;
     font-size: 1rem;
   }
+}
 
-  button {
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    color: $color-default;
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: $color-default;
 
-    padding: 5px;
-    border: 1px solid $color-default;
-    border-radius: 6px;
-  }
+  padding: 5px;
+  border: 1px solid $color-default;
+  border-radius: 6px;
 }
 
 .content {
@@ -81,15 +81,28 @@ form {
     list-style-type: none;
     width: 100%;
 
-    li {
-      display: flex;
-      gap: 20px;
+    p {
       color: $text-default;
-      font-size: 1.2rem;
-      margin: 10px;
 
       &.finished {
         color: $text-finished;
+      }
+    }
+
+    li {
+      display: flex;
+      gap: 20px;
+      font-size: 1.2rem;
+      margin: 10px;
+
+      input {
+        width: 100%;
+        outline: none;
+        background-color: transparent;
+        border: 1px solid $color-default;
+        color: $text-default;
+        border-radius: 6px;
+        padding: 5px;
       }
     }
   }
@@ -97,5 +110,30 @@ form {
   @media (max-width: 850px) {
     width: 70%;
     margin: 2rem auto;
+  }
+}
+
+.container-icon {
+  margin-left: auto;
+
+  i {
+    margin: 0px 0.3rem;
+    cursor: pointer;
+  
+    &:hover {
+      scale: 1.1;
+    }
+  
+    &.green {
+      color: $text-finished;
+    }
+  
+    &.red {
+      color: $color-red;
+    }
+  }
+
+  &.inactive {
+    display: none;
   }
 }
